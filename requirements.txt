@@ -4,7 +4,7 @@ fastapi==0.61.1
 h11==0.11.0
 Jinja2==2.11.2
 MarkupSafe==1.1.1
-# Pillow
+Pillow
 pydantic==1.7
 pytesseract
 python-multipart==0.0.5
