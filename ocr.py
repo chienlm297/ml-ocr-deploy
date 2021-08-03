@@ -15,14 +15,14 @@ async def read_image(img_path, lang="eng"):
     :text: str, converted text from image
     """
 
-    # try:
-    return pytesseract.image_to_string(img_path, lang=lang)
-    # # except:
+    try:
+        return pytesseract.image_to_string(img_path, lang=lang)
+    # except:
     # #     return "[ERROR] Unable to process file: {0}".format(img_path)
-    # except Exception as err:
-    #     exception_type = type(err).__name__
-    #     print(exception_type)
-    #     return exception_type
+    except Exception as err:
+        exception_type = type(err).__name__
+        print(exception_type)
+        return exception_type
 
 
 async def read_images_from_dir(dir_path, lang="eng", write_to_file=False):
